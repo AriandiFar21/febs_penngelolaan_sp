@@ -56,7 +56,20 @@ body {
   height: 150px;
 }
 
+.info-card {
+  background-color: #010825;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
 
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-card svg {
+  opacity: 0.8;
+}
 @media only screen and (max-width: 600px) {
   #hamburger {
     cursor: pointer;
@@ -87,8 +100,16 @@ body {
     padding: 10px !important;
   }
 
+  .welcome-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-banner div:first-child {
+    margin-bottom: 1rem;
+  }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1px;
   }
 }

@@ -45,14 +45,14 @@
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link active text-white fw-bold fs-6"
-            href="kelola_sp.html"
+          <a class="nav-link active text-white fw-bold fs-6" href="kelola_sp.html"
             >Kelola Surat Peringatan</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white fw-bold fs-6" href="kelola_user.html"
+          <a
+            class="nav-link text-white fw-bold fs-6"
+            href="kelola_user.html"
             >Kelola User</a
           >
         </li>
@@ -69,65 +69,66 @@
     <div class="content">
       <div class="container-fluid">
         <div class="content-wrapper p-4">
-          <div
-            class="welcome-banner p-4 rounded-3 d-flex justify-content-between align-items-center"
-          >
-            <div>
-              <h2 class="fw-bold mb-0">Tambah Surat Peringatan</h2>
-              <h2 class="fw-bold fs-5">
-                Kelola data SP dengan mudah dan cepat
-              </h2>
+          <!-- Otak atik bebas -->
+           <div class="main-content flex-grow-1">
+            
+            <h2 class="mb-4">Edit Surat Peringatan</h2>
+            <p class="text-muted mb-4">Isi detail pelanggaran mahasiswa dengan lengkap dan benar.</p>
+
+            <form>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nim" class="form-label fw-bold">NIM Mahasiswa</label>
+                        <input type="text" class="form-control" id="nim" placeholder="Contoh: 1257825309">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nama" class="form-label fw-bold">Nama Lengkap Mahasiswa</label>
+                        <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap Mahasiswa">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="jenisSP" class="form-label fw-bold">Jenis Surat Peringatan</label>
+                    <select class="form-select mb-3" id="jenisSP" aria-label="Jenis Surat Peringatan">
+                        <option selected>Pilih Jenis SP</option>
+                        <option value="1">SP I (Peringatan Awal)</option>
+                        <option value="2">SP II (Peringatan Kedua)</option>
+                        <option value="3">SP III (Peringatan Akhir)</option>
+                    </select>
+
+                    </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="tglKejadian" class="form-label fw-bold">Tanggal Kejadian</label>
+                        <input type="date" class="form-control" id="tglKejadian" placeholder="dd/mm/yyyy">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="tglTerbit" class="form-label fw-bold">Tanggal Penerbitan</label>
+                        <input type="date" class="form-control" id="tglTerbit" placeholder="dd/mm/yyyy">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="detailPelanggaran" class="form-label fw-bold">Detail Jenis Pelanggaran</label>
+                        <textarea class="form-control" id="detailPelanggaran" rows="4" placeholder="Jelaskan secara rinci pelanggaran yang dilakukan..."></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="keteranganTambahan" class="form-label fw-bold">Keterangan Tambahan / Tindak Lanjut</label>
+                        <textarea class="form-control" id="keteranganTambahan" rows="4" placeholder="Contoh: Sudah dipanggil dan disepakati akan memperbaiki perilaku..."></textarea>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <a href="kelola_sp.html" type="button" class="btn btn-secondary me-2">Batal</a>
+                    <a href="kelola_sp.html" type="submit" class="btn btn-dark">Terbitkan Surat Peringatan</a>
+                </div>
+                
+            </form>
             </div>
-            <div class="text-end">
-              <p class="mb-0">Halo, Staff Akademik</p>
-              <p class="mb-0 small">Anda Login Sebagai Admin</p>
-            </div>
-          </div>
-           <form action="proses/tambah_sp.php" method="POST" class="mt-4 p-4 border rounded-3 bg-white">
-                    <h5 class="mb-3">Data Mahasiswa</h5>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Cari NIM Mahasiswa</label>
-                            <input class="form-control" list="nim-options" id="nim_search" placeholder="Ketik NIM atau Nama..." required>
-                            <datalist id="nim-options">
-                            </datalist>
-                            <input type="hidden" name="nim" id="nim_hidden">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Nama Mahasiswa</label>
-                            <input type="text" name="nama_mahasiswa" id="nama_mahasiswa" class="form-control" readonly required>
-                        </div>
-                    </div>
-
-                    <h5 class="mb-3 mt-3">Detail Surat Peringatan</h5>
-                    <div class="mb-3">
-                        <label class="form-label">Jenis SP</label>
-                        <select name="jenis_sp" class="form-select" required>
-                            <option value="SP1">SP1</option>
-                            <option value="SP2">SP2</option>
-                            <option value="SP3">SP3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Pelanggaran</label>
-                        <textarea name="pelanggaran" class="form-control" rows="3" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Keterangan</label>
-                        <textarea name="keterangan" class="form-control" rows="2"></textarea>
-                    </div>
-
-                    <h5 class="mb-3 mt-3">Data Pemberi SP</h5>
-                    <div class="mb-3">
-                        <label class="form-label">Jabatan Pemberi SP</label>
-                        <input type="text" name="pemberi_sp_jabatan" class="form-control" placeholder="Contoh: Kepala Akademik" required>
-                    </div>
-
-                    <div class="mt-4">
-                        <a href="kelola_sp.html" type="submit" class="btn btn-primary">Simpan Data</a>
-                        <a href="kelola_sp.html" class="btn btn-secondary">Batal</a>
-                    </div>
-                </form>
+          <!-- batasan otak atik -->
         </div>
       </div>
     </div>

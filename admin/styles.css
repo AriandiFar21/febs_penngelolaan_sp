@@ -100,16 +100,7 @@ body {
     padding: 10px !important;
   }
 
-  .welcome-banner {
-    flex-direction: column;
-    text-align: center;
+  h2 {
+    font-size: 1px;
   }
-
-  .welcome-banner div:first-child {
-    margin-bottom: 1rem;
-  }
-
-    h2 {
-      font-size: 1px;
-    }
 }

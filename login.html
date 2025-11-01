@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <style>
+      .baan{
+        margin-left: 60px;
+        width: auto;
+      }
     .container {
       width: 79%;
     }
@@ -20,6 +24,11 @@
     @media only screen and (max-width: 600px) {
       .container {
         width: 100%;
+      }
+
+       .baan{
+        margin-left: 0px;
+        width: auto;
       }
     }
 
@@ -65,15 +74,22 @@
                   <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password Anda" value="" required>
                 </div>
                 <div class="row mt-2">
-              <div class="col-12">
+              <!-- <div class="col-12">
                 <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
                   <a href="#!" class="link-secondary text-decoration-none fw-bold">Lupa Password??</a>
                 </div>
-              </div>
+              </div> -->
             </div>
                 <div class="col-12">
                   <div class="d-grid">
-                    <a href="admin/index.html" class="btn bsb-btn-xl" type="submit">Masuk</a>
+                    <div class="row">
+                      <div class="col-md-6 col-12 text-center">
+                      <a href="admin/index.html" class="baan btn bsb btn-sm" type="submit">Masuk Admin</a>
+                      </div>
+                      <div class="col-md-6 col-12 mt-3 text-center mt-md-0">
+                      <a href="mahasiswa/index.html" class="btn bsb btn-sm" type="submit">Masuk Mahasiswa</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
